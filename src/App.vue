@@ -4,17 +4,18 @@
 		<br>
 		<div class="row">
 			<div class="col-12">
-				<h1>Evolution of {{ STAGES[$store.state.stage] }}</h1>
+				<h1>Evolution of {{ stage }}</h1>
 				<p>This is a beta version. It is incomplete and there are many bugs.</p>
 				<app-nav></app-nav>
 			</div>
 		</div>
 		<br>
-		<div class="row">
-			<div class="col-12">
-				<router-view/>
-			</div>
-		</div>
+		<transition
+			enter-active-class="animated zoomIn"
+			leave-active-class="animated flipOutX"
+			mode="out-in">
+			<router-view/>
+		</transition>
 	</div>
 </template>
 
@@ -25,10 +26,33 @@ import { STAGES } from "@/constants.js";
 
 export default {
 	name: "App",
-	data: () => ({ STAGES }),
 	components: {
-		AppHeader: Header,
-		AppNav: Nav,
+		appHeader: Header,
+		appNav: Nav,
+	},
+
+	created() {
+		this.update(0);
+	},
+
+	data: () => ({
+		now: 0,
+		prev: 0,
+	}),
+
+	computed: {
+		stage() {
+			return STAGES[this.$store.state.stage];
+		}
+	},
+
+	methods: {
+		update(now) {
+			this.$store.dispatch("update", (now - this.prev) / 1000 || 0);
+
+			this.prev = now;
+			requestAnimationFrame(this.update);
+		}
 	}
 }
 </script>
@@ -68,15 +92,6 @@ html {
 * { font-family: "Open Sans", "Lato", Arial, Helvetica, sans-serif !important; }
 
 h1, h2, h3, h4 { font-weight: 300; }
-
-.logo {
-	width: 100px;
-	height: auto;
-}
-
-.hidden {
-	opacity: 0;
-}
 
 .nav-pills a, .select-menu a {
 	transition: color 0.2s, background 0.2s;

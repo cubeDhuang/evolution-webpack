@@ -3,39 +3,47 @@
 		<router-link
 			class="nav-link"
 			to="/automata"
-			:class="[$route.path.includes('automata') ? 'active' : '']">
+			active-class="active">
 			Automata
 		</router-link>
 		<router-link
 			class="nav-link"
 			to="/upgrades"
-			:class="[$route.path.includes('upgrades') ? 'active' : '']">
+			active-class="active">
 			Upgrades
 		</router-link>
 		<router-link
 			class="nav-link"
 			to="/evolution"
-			:class="[$route.path.includes('evolution') ? 'active' : '']">
+			active-class="active">
 			Evolution
 		</router-link>
 		<router-link
 			class="nav-link"
 			to="/ascension"
-			:class="[$route.path.includes('ascension') ? 'active' : '']">
+			active-class="active">
 			Ascension
 		</router-link>
 		<router-link
 			class="nav-link"
+			to="/statistics"
+			active-class="active">
+			Statistics
+		</router-link>
+		<router-link
+			class="nav-link"
 			to="/settings"
-			:class="[$route.path.includes('settings') ? 'active' : '']">
+			active-class="active">
 			Settings
 		</router-link>
 	</nav>
 </template>
 
 <script>
-export default {
+import { mapState } from "vuex";
 
+export default {
+	name: "Nav"
 }
 </script>
 

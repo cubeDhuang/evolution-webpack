@@ -3,13 +3,13 @@
 		<div class="col-12">
 			<nav class="navbar navbar-dark bg-primary">
 				<span class="navbar-text">
-					Stuff<!-- Energy: {{ format(energy) }} -->
+					Energy: {{ FORMAT(energy) }}
 				</span>
 				<span class="navbar-text">
-					Stuff<!-- Efficiency: {{ format(eff) }} -->
+					Efficiency: {{ FORMAT(eff) }}
 				</span>
 				<span class="navbar-text">
-					Stuff<!-- Wisdom: {{ format(wisdom) }} -->
+					Wisdom: {{ FORMAT(wisdom) }}
 				</span>
 			</nav>
 		</div>
@@ -17,8 +17,15 @@
 </template>
 
 <script>
-export default {
+import { FORMATTER } from "@/constants.js";
+import { Decimal } from "decimal.js";
 
+import { mapState } from "vuex";
+
+export default {
+	name: "Header",
+	data: () => ({ FORMAT: FORMATTER.formatFull, Decimal }),
+	computed: mapState(["energy", "eff", "wisdom"])
 }
 </script>
 

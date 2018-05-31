@@ -1,6 +1,6 @@
 <template>
 	<div>
-		SETTINGS!!!
+		<img src="@/assets/logo.svg" alt="Evolution Logo" class="logo">
 	</div>
 </template>
 
@@ -10,6 +10,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.logo {
+	width: 100px;
+	height: auto;
+}
 </style>

@@ -1,3 +1,6 @@
+import Decimal from "decimal.js";
+import { numberformat } from "swarm-numberformat";
+
 export const STAGES = [
 	"Archaebacteria",
 	"Eukaryota",
@@ -27,3 +30,11 @@ export const SFX = {
 	switchmenu: new Audio("@/assets/audio/switchmenu.mp3"),
 	upgrade: new Audio("@/assets/audio/upgrade.mp3"),
 };
+
+export const FORMATTER = new numberformat.Formatter({
+	sigfigs: 5,
+	format: "standard",
+	flavor: "full",
+	backend: "decimal.js",
+	Decimal: Decimal
+});

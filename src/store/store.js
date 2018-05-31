@@ -1,22 +1,24 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import Decimal from "decimal.js";
-import numberformat from "swarm-numberformat";
+
+import nav from "./modules/nav.js";
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
+	modules: {
+		nav
+	},
+
 	state: {
 		useSfx: true,
 
-		eff: new Decimal(1),
 		energy: new Decimal(0),
 		prevEnergy: new Decimal(0),
 		totalNow: new Decimal(0),
 		total: new Decimal(0),
-		speed: new Decimal(500),
-		canMutate: true,
-		gain: new Decimal(1),
+		eff: new Decimal(1),
 
 		evolveReq: new Decimal(1000),
 		stage: 0,
@@ -135,5 +137,22 @@ export const store = new Vuex.Store({
 				prgm: "gain"
 			},
 		]
+	},
+
+	mutations: {
+		calcTotal(state) {
+			if (state.energy.gt(state.prevEnergy)) {
+				const diff = state.energy.minus(state.prevEnergy);
+				state.total = state.total.plus(diff);
+				state.totalNow = state.totalNow.plus(diff);
+			}
+			state.prevEnergy = state.energy;
+		}
+	},
+
+	actions: {
+		update(context) {
+			context.commit("calcTotal");
+		},
 	}
 });

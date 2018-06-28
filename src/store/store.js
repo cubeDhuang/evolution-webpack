@@ -29,18 +29,6 @@ export const store = new Vuex.Store({
 		
 		automata: [
 			{
-				name: [
-					"Heat Absorber",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Metabolism Process",
-					"Energy Source",
-				],
 				amount: new Decimal(0),
 				eps: new Decimal(1),
 				cost: new Decimal(1000),
@@ -48,37 +36,13 @@ export const store = new Vuex.Store({
 				unlocked: 0
 			},
 			{
-				name: [
-					"NOT SHOWN",
-					"Mitochondria",
-					"Integument System",
-					"Circulatory Management",
-					"Nerve",
-					"Nerve",
-					"Nerve Group",
-					"Brain Nerve Group",
-					"Brain Nerve Group",
-					"Neural Network Node",
-				],
 				amount: new Decimal(0),
 				eps: new Decimal(5),
-				cost: new Decimal(100000),
+				cost: new Decimal(100000), // 100K
 				ocost: new Decimal(100000),
 				unlocked: 1
 			},
 			{
-				name: [
-					"NOT SHOWN",
-					"NOT SHOWN",
-					"Protein Builder",
-					"Protein Builder",
-					"Protein Builder",
-					"Protein Builder",
-					"Protein Builder",
-					"Protein Builder",
-					"Protein Builder",
-					"Learning Algorithm",
-				],
 				amount: new Decimal(0),
 				eps: new Decimal(5),
 				cost: new Decimal(10000000), // 10 Million
@@ -89,52 +53,11 @@ export const store = new Vuex.Store({
 
 		upgrades: [
 			{
-				name: [
-					"Faster Reproduction",
-					"Faster Reproduction",
-					"Faster Reproduction",
-					"Faster Reproduction",
-					"Faster Reproduction",
-					"Faster Reproduction",
-					"Faster Reproduction",
-					"Stronger Tools",
-					"Better Tech",
-					"Faster Algorithms",
-					"Faster Algorithms",
-					"Greater Universes",
-					"Universe Fragments",
-					"Perfect Universes",
-					// DO SOMETHING FOR INFINITIES VVV
-				],
-				level: new Decimal(1),
-				effect: "Increases Speed",
-				cost: new Decimal(10),
-				ocost: new Decimal(10),
-				prgm: "speed"
-			},
-			{
-				name: [
-					"Useful Genes",
-					"Useful Proteins",
-					"Advanced Genes",
-					"Advanced Proteins",
-					"Bigger Size",
-					"Complex Brains",
-					"Complex Brains",
-					"Complex Brains",
-					"Complex Brains",
-					"Improved Processing",
-					"Improved Expansion",
-					"Exotic Universes",
-					"Faster Destruction",
-					"Exotic Multiverses",
-					// DO SOMETHING FOR INFINITIES VVV
-				],
 				level: new Decimal(1),
 				effect: "More Energy Gain",
 				cost: new Decimal(100),
 				ocost: new Decimal(100),
-				prgm: "gain"
+				item: "gain"
 			},
 		]
 	},

@@ -17,14 +17,13 @@
 </template>
 
 <script>
-import { FORMATTER } from "@/constants.js";
-import { Decimal } from "decimal.js";
-
 import { mapState } from "vuex";
+
+import { FORMATTER } from "@/constants.js";
 
 export default {
 	name: "Header",
-	data: () => ({ FORMAT: FORMATTER.formatFull, Decimal }),
+	data: () => ({ FORMAT: FORMATTER.formatFull }),
 	computed: mapState(["energy", "eff", "wisdom"])
 }
 </script>

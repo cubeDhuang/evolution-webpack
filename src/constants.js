@@ -1,3 +1,8 @@
+import Vue from "vue";
+import Constants from "vue-constants";
+
+Vue.use(Constants);
+
 import Decimal from "decimal.js";
 import { numberformat } from "swarm-numberformat";
 

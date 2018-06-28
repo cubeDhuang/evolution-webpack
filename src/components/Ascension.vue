@@ -1,6 +1,6 @@
 <template>
 	<div>
-		ASCENSION!!!
+		<h2>Ascension</h2>
 	</div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		EVOLUTION!!!
+		<h2>Evolution</h2>
 	</div>
 </template>
 

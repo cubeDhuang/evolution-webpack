@@ -1,5 +1,10 @@
 <template>
 	<div>
+		<h2>Settings</h2>
+		<br>
+		<p>
+			<a href="https://cubedhuang.com" class="btn btn-outline-success">Back to CubeDHuang</a>
+		</p>
 		<img src="@/assets/logo.svg" alt="Evolution Logo" class="logo">
 	</div>
 </template>
@@ -14,5 +19,6 @@ export default {
 .logo {
 	width: 100px;
 	height: auto;
+	display: block;
 }
 </style>

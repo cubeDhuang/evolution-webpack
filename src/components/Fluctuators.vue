@@ -2,7 +2,7 @@
 	<div>
 		<div class="row">
 			<div class="col-12">
-				<h2>Automata</h2>
+				<h2>Fluctuators</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -24,8 +24,8 @@ import { mapState } from "vuex";
 import { FORMATTER } from "@/constants.js";
 
 export default {
-	name: "Automata",
-	computed: mapState(["automata"]),
+	name: "Fluctuators",
+	computed: mapState(["flucs"]),
 	constants: {
 		NAMES: [
 			[
@@ -38,7 +38,7 @@ export default {
 				"Metabolism Process",
 				"Metabolism Process",
 				"Metabolism Process",
-				"Energy Source",
+				"Strings Source",
 			],
 			[
 				"NOT SHOWN",

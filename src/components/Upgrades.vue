@@ -9,7 +9,7 @@ import { mapState } from "vuex";
 
 export default {
 	name: "Upgrades",
-	computed: mapState(["automata"]),
+	computed: mapState(["flucs"]),
 	constants: {
 		NAMES: [
 			[

@@ -4,14 +4,14 @@
 		<br>
 		<div class="row">
 			<div class="col-12">
-				<h1>Evolution of {{ stage }}</h1>
+				<h1>{{ stage }}</h1>
 				<p>This is a beta version. It is incomplete and there are many bugs.</p>
 				<app-nav></app-nav>
 			</div>
 		</div>
 		<br>
 		<transition
-			enter-active-class="animated zoomIn"
+			enter-active-class="animated fadeIn"
 			leave-active-class="animated flipOutX"
 			mode="out-in">
 			<router-view/>

@@ -14,11 +14,11 @@ export const store = new Vuex.Store({
 	state: {
 		useSfx: true,
 
-		energy: new Decimal(0),
-		prevEnergy: new Decimal(0),
+		strings: new Decimal(0),
+		prevStrings: new Decimal(0),
 		totalNow: new Decimal(0),
 		total: new Decimal(0),
-		eff: new Decimal(1),
+		particles: new Decimal(1),
 
 		evolveReq: new Decimal(1000),
 		stage: 0,
@@ -27,7 +27,7 @@ export const store = new Vuex.Store({
 		wisdom: new Decimal(1),
 		ascensions: 0,
 		
-		automata: [
+		flucs: [
 			{
 				amount: new Decimal(0),
 				eps: new Decimal(1),
@@ -54,7 +54,7 @@ export const store = new Vuex.Store({
 		upgrades: [
 			{
 				level: new Decimal(1),
-				effect: "More Energy Gain",
+				effect: "More Strings Gain",
 				cost: new Decimal(100),
 				ocost: new Decimal(100),
 				item: "gain"
@@ -64,12 +64,12 @@ export const store = new Vuex.Store({
 
 	mutations: {
 		calcTotal(state) {
-			if (state.energy.gt(state.prevEnergy)) {
-				const diff = state.energy.minus(state.prevEnergy);
+			if (state.strings.gt(state.prevStrings)) {
+				const diff = state.strings.minus(state.prevStrings);
 				state.total = state.total.plus(diff);
 				state.totalNow = state.totalNow.plus(diff);
 			}
-			state.prevEnergy = state.energy;
+			state.prevStrings = state.strings;
 		}
 	},
 

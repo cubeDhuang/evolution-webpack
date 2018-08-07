@@ -1,22 +1,16 @@
 <template>
-	<nav class="nav nav-pills">
+	<nav class="nav nav-pills" @click.capture="changeSound">
 		<router-link
 			class="nav-link"
-			to="/automata"
+			to="/flucs"
 			active-class="active">
-			Automata
+			Fluctuators
 		</router-link>
 		<router-link
 			class="nav-link"
 			to="/upgrades"
 			active-class="active">
 			Upgrades
-		</router-link>
-		<router-link
-			class="nav-link"
-			to="/evolution"
-			active-class="active">
-			Evolution
 		</router-link>
 		<router-link
 			class="nav-link"
@@ -40,10 +34,15 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { SFX } from "@/constants.js";
 
 export default {
-	name: "Nav"
+	name: "Nav",
+	methods: {
+		changeSound() {
+			SFX.switchmenu.play();
+		}
+	}
 }
 </script>
 

@@ -1,11 +1,11 @@
 const state = {
-	automata: 0,
+	flucs: 0,
 	upgrade: 0
 };
 
 const mutations = {
-	automata(state, page) {
-		state.automata = page;
+	flucs(state, page) {
+		state.flucs = page;
 	},
 	upgrade(state, page) {
 		state.upgrade = page;

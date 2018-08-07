@@ -3,10 +3,10 @@
 		<div class="col-12">
 			<nav class="navbar navbar-dark bg-primary">
 				<span class="navbar-text">
-					Energy: {{ FORMAT(energy) }}
+					Strings: {{ FORMAT(strings) }}
 				</span>
 				<span class="navbar-text">
-					Efficiency: {{ FORMAT(eff) }}
+					Particles: {{ FORMAT(particles) }}
 				</span>
 				<span class="navbar-text">
 					Wisdom: {{ FORMAT(wisdom) }}
@@ -24,7 +24,7 @@ import { FORMATTER } from "@/constants.js";
 export default {
 	name: "Header",
 	data: () => ({ FORMAT: FORMATTER.formatFull }),
-	computed: mapState(["energy", "eff", "wisdom"])
+	computed: mapState(["strings", "particles", "wisdom"])
 }
 </script>
 

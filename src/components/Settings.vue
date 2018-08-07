@@ -5,7 +5,7 @@
 		<p>
 			<a href="https://cubedhuang.com" class="btn btn-outline-success">Back to CubeDHuang</a>
 		</p>
-		<img src="@/assets/logo.svg" alt="Evolution Logo" class="logo">
+		<img src="@/assets/logo.svg" alt="String Logo" class="logo">
 	</div>
 </template>
 

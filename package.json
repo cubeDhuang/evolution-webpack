@@ -1,7 +1,7 @@
 {
-  "name": "evolution",
+  "name": "string",
   "version": "1.0.0",
-  "description": "Evolution Game",
+  "description": "Game to Build the Universe",
   "author": "cubeDhuang <99danielh@gmail.com>",
   "private": true,
   "scripts": {
